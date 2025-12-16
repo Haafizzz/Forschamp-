@@ -3,10 +3,11 @@
     "rewrites": [
         {
             "source": "/test",
-            "destination": "/forschamp.html"
+            "destination": "/"
         }
     ]
 
 }
+
 
 
