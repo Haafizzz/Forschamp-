@@ -1,14 +1,8 @@
 {
-    "version": 2,
-    "rewrites": [
-        {
-            "source": "/",
-            "destination": "/forschamp.html"
-        }
-    ]
-
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
-
 
 
 
