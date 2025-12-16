@@ -2,12 +2,13 @@
     "version": 2,
     "rewrites": [
         {
-            "source": "/test",
-            "destination": "/"
+            "source": "/",
+            "destination": "/forschamp.html"
         }
     ]
 
 }
+
 
 
 
