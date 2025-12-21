@@ -2,8 +2,9 @@
     "rewrites": [
         {
             "source": "/",
-            "destination": "/forschamp.html"
+            "destination": "/forschamp-two.html"
         }
     ]
 }
+
 
