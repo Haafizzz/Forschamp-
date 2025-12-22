@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Changa+One', 'Special Elite', cursive;
     background: #d4a574;
     color: #2d1810;
     overflow-x: hidden;
@@ -802,3 +802,4 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
