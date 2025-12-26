@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORSCHAMP 2026</title>
+    <title>FORSCHAMP 2026 | Wild West Edition</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,21 +21,59 @@
 
     <header>
         <div class="logo">
-            <span class="star">★</span>
+            <img src="logo.png" class="imagelogo" alt="FORSCHAMP LOGO" width="50" height="50">
+            <!-- <span class="star">★</span> -->
             <span>FORSCHAMP</span>
-            <span class="star">★</span>
+            <!-- <span class="star">★</span> -->
         </div>
-        <nav id="nav">
+        <!-- <nav id="nav">
+            <a href="#lomba">LOMBA</a>
+            <a href="#linimasa">TIMELINE</a>
+            <a href="#biaya">BIAYA</a>
+            <a href="#hadiah">HADIAH</a>
+            <a href="#tentang">TENTANG</a>
+            <a href="#kontak">KONTAK</a>
+            <button class="login-btn">LOGIN</button>
+        </nav> -->
+
+        <nav id="nav" class="topnav">
             <a href="#aboutus">ABOUT US</a>
-            <a href="#forschamp">FORSCHAMP 2026</a>
-            <a href="#forschampcup">FORSCHAMP CUP</a>
-            <a href="#forschampfunrun">FORSCHAMP FUN RUN</a>
-            <a href="#forschampfest">FORSCHAMP FEST</a>
+            <div class="dropdown">
+                <button class="dropbtn">FORSCHAMP 2026
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#forschampcup">FORSCHAMP CUP</a>
+                    <a href="#forschampfunrun">FORSCHAMP FUN RUN</a>
+                    <a href="#forschampfest">FORSCHAMP FEST</a>
+                </div>
+            </div>
             <a href="#linimasa">TIMELINE</a>
             <a href="#hadiah">MERCHANDISE</a>
             <a href="#kontak">KONTAK</a>
-            <button class="login-btn">LOGIN</button>
+            <!-- <button class="login-btn">LOGIN</button> -->
         </nav>
+
+        <!-- <div class="topnav" id="myTopnav">
+            <a href="#lomba">LOMBA</a>
+            <a href="#linimasa">TIMELINE</a>
+            <a href="#biaya">BIAYA</a>
+            <div class="dropdown">
+                <button class="dropbtn">HADIAH
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">HADIAH 11111111111111111111</a>
+                    <a href="#">HADIAH 2</a>
+                    <a href="#">HADIAH 3</a>
+                </div>
+            </div>
+            <a href="#tentang">TENTANG</a>
+            <a href="#kontak">KONTAK</a>
+            <button class="login-btn">LOGIN</button>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div> -->
+
         <div class="mobile-menu-btn" id="mobileMenuBtn">
             <span></span>
             <span></span>
@@ -333,7 +369,3 @@
 </body>
 
 </html>
-
-
-
-
