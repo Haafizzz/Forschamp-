@@ -4,6 +4,16 @@ const nav = document.getElementById('nav');
 
 mobileMenuBtn.addEventListener('click', function () {
     nav.classList.toggle('active');
+
+    // var x = document.getElementById("nav");
+    // if (x.className === "topnav active") {
+    //     x.className += " responsive";
+    //     alert("responsive");
+    // } else {
+    //     x.className = "topnav";
+    //     alert("topnav");
+    // }
+
 });
 
 // Close mobile menu when clicking a link
@@ -60,10 +70,10 @@ competitionCards.forEach(function (card) {
 });
 
 // Login button functionality
-const loginBtn = document.querySelector('.login-btn');
-loginBtn.addEventListener('click', function () {
-    alert('Fitur login akan segera hadir! Pendaftaran dimulai Desember 2025.');
-});
+// const loginBtn = document.querySelector('.login-btn');
+// loginBtn.addEventListener('click', function () {
+//     alert('Fitur login akan segera hadir! Pendaftaran dimulai Desember 2025.');
+// });
 
 // Add scroll effect to header
 let lastScrollTop = 0;
@@ -171,3 +181,15 @@ priceCards.forEach(function (card) {
 
 console.log('🤠 OU Festival 11 - Wild West Edition loaded successfully! Yeehaw!');
 console.log('🏜️ Pendaftaran dibuka sampai Januari 2026');
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+// function myFunction() {
+//   var x = document.getElementById("nav");
+//   if (x.className === "topnav") {
+//     x.className += " responsive";
+//     //alert("responsive");
+//   } else {
+//     x.className = "topnav";
+//     //alert("topnav");
+//   }
+// }
