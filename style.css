@@ -46,17 +46,17 @@ body {
 }
 
 .tumbleweed:nth-child(1) {
-    top: 15%;
+    top: 25%;
     left: 20%;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><defs><linearGradient id="cactus" x1="0%25" y1="0%25" x2="0%25" y2="100%25"><stop offset="0%25" style="stop-color:%23228B22"/><stop offset="100%25" style="stop-color:%23006400"/></linearGradient></defs><ellipse cx="30" cy="50" rx="18" ry="35" fill="url(%23cactus)"/><ellipse cx="50" cy="60" rx="22" ry="50" fill="url(%23cactus)"/><ellipse cx="70" cy="55" rx="16" ry="30" fill="url(%23cactus)"/><circle cx="32" cy="35" r="3" fill="%23FFD700"/><circle cx="28" cy="45" r="3" fill="%23FFD700"/><circle cx="52" cy="40" r="3" fill="%23FFD700"/><circle cx="48" cy="55" r="3" fill="%23FFD700"/><circle cx="72" cy="45" r="3" fill="%23FFD700"/></svg>');
-    animation-duration: 40s;
-    animation-delay: -10s;
+    background-image: url('KAKTUS.png');
+    animation-duration: 30s;
+    animation-delay: -2s;
 }
 
 .tumbleweed:nth-child(2) {
     top: 45%;
     left: 50%;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 Q30 20 25 35 Q20 50 25 65 Q30 80 50 90 Q70 80 75 65 Q80 50 75 35 Q70 20 50 10 Z" fill="%23A9A9A9" stroke="%23696969" stroke-width="2"/><rect x="30" y="20" width="8" height="15" rx="2" fill="%23D3D3D3"/><rect x="62" y="20" width="8" height="15" rx="2" fill="%23D3D3D3"/><rect x="46" y="72" width="8" height="15" rx="2" fill="%23D3D3D3"/><circle cx="38" cy="45" r="5" fill="%23505050"/><circle cx="38" cy="55" r="5" fill="%23505050"/><circle cx="38" cy="65" r="5" fill="%23505050"/><circle cx="62" cy="45" r="5" fill="%23505050"/><circle cx="62" cy="55" r="5" fill="%23505050"/><circle cx="62" cy="65" r="5" fill="%23505050"/></svg>');
+    background-image: url('MAGNET.png');
     animation-duration: 50s;
     animation-delay: -25s;
 }
@@ -64,24 +64,26 @@ body {
 .tumbleweed:nth-child(3) {
     top: 70%;
     left: 80%;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><defs><linearGradient id="boot" x1="0%25" y1="0%25" x2="0%25" y2="100%25"><stop offset="0%25" style="stop-color:%238B4513"/><stop offset="100%25" style="stop-color:%23654321"/></linearGradient></defs><path d="M30 30 L30 90 Q30 100 40 100 L60 100 Q70 100 70 90 L70 70 Q70 65 75 65 L85 65 Q90 65 90 70 L90 95 Q90 105 80 110 L20 110 Q15 105 15 95 L15 30 Z" fill="url(%23boot)"/><path d="M32 35 Q35 32 45 32 Q50 32 52 35 L52 50 Q50 55 45 55 Q35 55 32 50 Z" fill="%23DAA520"/><circle cx="40" cy="75" r="4" fill="%232F4F8F"/><circle cx="50" cy="75" r="4" fill="%232F4F8F"/><circle cx="60" cy="75" r="4" fill="%232F4F8F"/><circle cx="40" cy="85" r="4" fill="%232F4F8F"/><circle cx="50" cy="85" r="4" fill="%232F4F8F"/><circle cx="60" cy="85" r="4" fill="%232F4F8F"/></svg>');
-    animation-duration: 45s;
+    background-image: url('SEPATU.png');
+    animation-duration: 25s;
     animation-delay: -35s;
 }
+
 
 .desert-bg::after {
     content: '';
     position: absolute;
-    top: 25%;
+    top: 40%;
     width: 70px;
     height: 70px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80"><defs><linearGradient id="hat" x1="0%25" y1="0%25" x2="0%25" y2="100%25"><stop offset="0%25" style="stop-color:%23D2691E"/><stop offset="100%25" style="stop-color:%238B4513"/></linearGradient></defs><ellipse cx="60" cy="65" rx="55" ry="12" fill="%23A0522D"/><path d="M25 60 Q25 25 40 20 L80 20 Q95 25 95 60 Z" fill="url(%23hat)"/><rect x="35" y="35" width="50" height="8" rx="2" fill="%232F4F8F"/><circle cx="40" cy="39" r="3" fill="%23DAA520"/><circle cx="48" cy="39" r="3" fill="%23DAA520"/><circle cx="56" cy="39" r="3" fill="%23DAA520"/><circle cx="64" cy="39" r="3" fill="%23DAA520"/><circle cx="72" cy="39" r="3" fill="%23DAA520"/><circle cx="80" cy="39" r="3" fill="%23DAA520"/></svg>');
+    background-image: url('TOPI.png');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.4;
     animation: floatAcross 32s linear infinite;
-    animation-delay: 5s;
+    animation-delay: 2s;
     filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+    left: -40%;
 }
 
 @keyframes floatAcross {
