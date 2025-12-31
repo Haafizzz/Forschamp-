@@ -2,8 +2,9 @@
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const nav = document.getElementById('nav');
 
+nav.classList.toggle('active');
 mobileMenuBtn.addEventListener('click', function () {
-    nav.classList.toggle('active');
+
 
     // var x = document.getElementById("nav");
     // if (x.className === "topnav active") {
