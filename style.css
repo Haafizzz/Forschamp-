@@ -414,6 +414,12 @@ section {
     margin-top: 1rem;
 }
 
+.poster-badge:hover {
+    background: #a0522d;
+    cursor: pointer;
+    animation: badgeBounce 1s;
+}
+
 .poster-reward {
     font-family: 'Rye', cursive;
     font-size: 1.2rem;
