@@ -48,7 +48,7 @@ will-change: transform, left;
 .tumbleweed:nth-child(1) {
 top: 25%;
 left: 20%;
-background-image: url('KAKTUS.png');
+background-image: url('images/KAKTUS.png');
 animation-duration: 30s;
 animation-delay: -2s;
 }
@@ -56,7 +56,7 @@ animation-delay: -2s;
 .tumbleweed:nth-child(2) {
 top: 45%;
 left: 50%;
-background-image: url('MAGNET.png');
+background-image: url('images/MAGNET.png');
 animation-duration: 50s;
 animation-delay: -25s;
 }
@@ -64,7 +64,7 @@ animation-delay: -25s;
 .tumbleweed:nth-child(3) {
 top: 70%;
 left: 80%;
-background-image: url('SEPATU.png');
+background-image: url('images/SEPATU.png');
 animation-duration: 30s;
 animation-delay: -35s;
 }
@@ -76,7 +76,7 @@ position: absolute;
 top: 40%;
 width: 70px;
 height: 70px;
-background-image: url('TOPI.png');
+background-image: url('images/TOPI.png');
 background-size: contain;
 background-repeat: no-repeat;
 opacity: 0.4;
