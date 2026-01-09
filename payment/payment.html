@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payment.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap"
+    />
+    <title>Payment</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="fun-run.html" class="back-link">⬅ Kembali</a>
+
+      <div class="header">
+        <h1>🛒 CHECKOUT 🛒</h1>
+        <p>Order your fun run tiket now!</p>
+      </div>
+
+      <div class="ticket-section">
+        <div class="ticket-header">
+          <h2>🏃 Fun Run 5K</h2>
+          <div class="ticket-price">Rp 250.000</div>
+        </div>
+
+        <div class="quantity-control">
+          <label>Jumlah Tiket:</label>
+          <div class="quantity-buttons">
+            <button class="qty-btn" id="decrease">-</button>
+            <div class="qty-display" id="quantity">1</div>
+            <button class="qty-btn" id="increase">+</button>
+          </div>
+        </div>
+
+        <div class="total-section">
+          <div class="total-row">
+            <span>Harga per Tiket:</span>
+            <span class="total-amount">Rp 250.000</span>
+          </div>
+          <div class="total-row">
+            <span>Jumlah Tiket:</span>
+            <span class="total-amount" id="qty-display">1</span>
+          </div>
+          <div class="total-row">
+            <span>Subtotal:</span>
+            <span class="total-amount" id="subtotal">Rp 125.000</span>
+          </div>
+          <div class="total-row">
+            <span>Biaya Admin:</span>
+            <span class="total-amount" id="admin-fee">Rp 5.000</span>
+          </div>
+          <div class="total-row grand-total">
+            <span>TOTAL PEMBAYARAN:</span>
+            <span class="total-amount" id="grand-total">Rp 130.000</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="checkout-form">
+        <div class="form-section">
+          <h2>📝 Data Pembeli</h2>
+
+          <div class="form-group">
+            <label>Nama Lengkap *</label>
+            <input
+              type="text"
+              id="fullname"
+              required
+              placeholder="Masukkan nama lengkap"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email *</label>
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="email@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label>No. Telepon *</label>
+              <input
+                type="tel"
+                id="phone"
+                required
+                placeholder="08xxxxxxxxxx"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tanggal Lahir *</label>
+              <input type="date" id="birthdate" required />
+            </div>
+            <div class="form-group">
+              <label>Jenis Kelamin *</label>
+              <select id="gender" required>
+                <option value="">Pilih</option>
+                <option value="male">Laki-laki</option>
+                <option value="female">Perempuan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Ukuran Jersey *</label>
+            <select id="jersey-size" required>
+              <option value="">Pilih Ukuran</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Alamat Lengkap *</label>
+            <textarea
+              id="address"
+              required
+              placeholder="Masukkan alamat lengkap untuk pengiriman"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Catatan (Opsional)</label>
+            <textarea
+              id="notes"
+              placeholder="Tambahkan catatan jika ada"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>💳 Metode Pembayaran</h2>
+          <div class="payment-methods">
+            <div class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                id="bca"
+                value="bca"
+                required
+              />
+              <label for="bca" class="payment-label">BCA</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="mandiri" value="mandiri" />
+              <label for="mandiri" class="payment-label">Mandiri</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="bni" value="bni" />
+              <label for="bni" class="payment-label">BNI</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="gopay" value="gopay" />
+              <label for="gopay" class="payment-label">GoPay</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="ovo" value="ovo" />
+              <label for="ovo" class="payment-label">OVO</label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" name="payment" id="dana" value="dana" />
+              <label for="dana" class="payment-label">DANA</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="checkout-btn">🎟️ Bayar Sekarang 🎟️</button>
+      </form>
+
+      <div class="success-message" id="success-message">
+        <h3>✅ Pemesanan Berhasil!</h3>
+        <p>
+          Terima kasih atas pemesanan Anda. Kami akan mengirimkan konfirmasi
+          pembayaran ke email Anda.
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem">
+          ID Pesanan: <strong id="order-id"></strong>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

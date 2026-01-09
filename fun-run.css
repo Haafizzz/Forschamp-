@@ -226,7 +226,8 @@ section {
   justify-content: center;
 }
 
-.section-run-logo {
+.section-run-logo-right,
+.section-run-logo-left {
   width: 100px;
   height: 100px;
   margin-right: 1rem;
@@ -431,7 +432,20 @@ footer {
 
 @media (max-width: 768px) {
   .western-title {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  .direction {
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    margin-top: 3rem;
+  }
+  .back-btn {
+    padding: 1rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    align-items: center;
   }
 
   .subtitle-banner h2 {
@@ -450,5 +464,12 @@ footer {
   .payment-btn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
+  }
+
+  .section-run-logo-right {
+    margin-right: 1.5rem;
+  }
+  .section-run-logo-left {
+    margin-left: 1.5rem;
   }
 }
