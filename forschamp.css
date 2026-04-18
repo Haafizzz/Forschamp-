@@ -126,7 +126,8 @@ header {
   z-index: 1000;
   background: linear-gradient(180deg, #5d4e37 0%, #3d2f1f 100%);
   border-bottom: 4px solid #8b6f47;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5),
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.5),
     inset 0 -2px 0 rgba(139, 111, 71, 0.5);
 }
 
@@ -137,7 +138,9 @@ header {
   font-family: "Rye", cursive;
   font-size: 2rem;
   color: #f4e4c1;
-  text-shadow: 3px 3px 0 #2d1810, -1px -1px 0 #8b6f47;
+  text-shadow:
+    3px 3px 0 #2d1810,
+    -1px -1px 0 #8b6f47;
 }
 
 .logo .star {
@@ -234,7 +237,9 @@ nav a:hover {
   font-size: 0.8rem;
   letter-spacing: 2px;
   color: #f4e4c1;
-  box-shadow: 5px 5px 0 #2d1810, inset 0 -3px 0 rgba(139, 111, 71, 0.5);
+  box-shadow:
+    5px 5px 0 #2d1810,
+    inset 0 -3px 0 rgba(139, 111, 71, 0.5);
   transform: rotate(-2deg);
   animation: swingSign 3s ease-in-out infinite;
 }
@@ -277,13 +282,17 @@ nav a:hover {
 .western-title .line1 {
   display: block;
   color: #f4e4c1;
-  text-shadow: 5px 5px 0 #2d1810, -2px -2px 0 #8b6f47;
+  text-shadow:
+    5px 5px 0 #2d1810,
+    -2px -2px 0 #8b6f47;
 }
 
 .western-title .line2 {
   display: block;
   color: #8b4513;
-  text-shadow: 5px 5px 0 #2d1810, -2px -2px 0 #f4e4c1;
+  text-shadow:
+    5px 5px 0 #2d1810,
+    -2px -2px 0 #f4e4c1;
 }
 
 .subtitle-banner {
@@ -352,7 +361,9 @@ section {
   font-family: "Rye", cursive;
   font-size: 3rem;
   color: #2d1810;
-  text-shadow: 3px 3px 0 #f4e4c1, -1px -1px 0 #8b6f47;
+  text-shadow:
+    3px 3px 0 #f4e4c1,
+    -1px -1px 0 #8b6f47;
   letter-spacing: 3px;
 }
 
@@ -370,6 +381,7 @@ section {
   box-shadow: 8px 8px 0 rgba(45, 24, 16, 0.3);
   transition: all 0.3s;
   position: relative;
+  background-image: url("pelari kalcer.png");
 }
 
 .wanted-poster::before {
@@ -858,6 +870,9 @@ footer {
 
   .section-title {
     font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    margin: 50%;
   }
 
   .wanted-grid {
