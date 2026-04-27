@@ -155,7 +155,7 @@ const statsObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 },
 );
 
 const statNumbers = document.querySelectorAll(".stat-number");
@@ -181,15 +181,27 @@ const counterObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 },
 );
 
 const priceCards = document.querySelectorAll(
-  "#biaya .competition-card, #hadiah .competition-card"
+  "#biaya .competition-card, #hadiah .competition-card",
 );
 priceCards.forEach(function (card) {
   counterObserver.observe(card);
 });
+
+//countdown time
+const element = document.getElementById("stat-badge");
+const countdownDate = new Date("AUG 15 2026 00:00:00");
+
+const now = new Date().getTime();
+const distance = countdownDate - now; //  nama variabel konsisten
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24)); //  Math.floor
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); //  argumen lengkap
+
+element.textContent = `${days} hari ${hours} jam`; // contoh output ke elemen
 
 console.log("🤠 FORSCHAMP 2026 successfully! Yeehaw!");
 console.log("🏜️ Pendaftaran dibuka sampai Agustus 2026");

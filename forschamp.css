@@ -365,6 +365,18 @@ section {
     3px 3px 0 #f4e4c1,
     -1px -1px 0 #8b6f47;
   letter-spacing: 3px;
+  align-items: center;
+}
+
+.section-title-merchendise {
+  font-family: "Rye", cursive;
+  font-size: 3rem;
+  color: #2d1810;
+  text-shadow:
+    3px 3px 0 #f4e4c1,
+    -1px -1px 0 #8b6f47;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
 .wanted-grid {
@@ -589,6 +601,7 @@ section {
   text-align: center;
   box-shadow: 5px 5px 0 rgba(45, 24, 16, 0.5);
   transition: all 0.3s;
+  background-image: url("images/Summer\ Park\ Festival\ 2016.jpg");
 }
 
 .stat-badge:hover {
