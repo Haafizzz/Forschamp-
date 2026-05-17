@@ -370,198 +370,98 @@ section {
 }
 
 @media (max-width: 768px) {
-  .merch-grid {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    gap: 2rem;
-    padding: 10px;
-  }
-}
 
-.color-selector {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 1.2rem;
-}
-
-.color-label {
-  font-family: "Special Elite", cursive;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  color: #5d4e37;
-}
-
-.color-dot {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 3px solid #8b6f47;
-  cursor: pointer;
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-  padding: 0;
-}
-
-.color-dot:hover {
-  transform: scale(1.15);
-  border-color: #2d1810;
-}
-
-.color-dot.active {
-  border-color: #2d1810;
-  box-shadow: 0 0 0 3px #ffd700;
-  transform: scale(1.15);
-}
-
-.payment-section {
-  padding: 0 1rem;
-  text-align: center;
-  margin: 4rem 0;
-}
-
-.payment-btn {
-  width: auto;
-  min-width: 200px;
-  margin: 0 auto;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  background: linear-gradient(180deg, #ffd700 0%, #daa520 100%);
-  color: #2d1810;
-  border: 5px solid #2d1810;
-  border-radius: 10px;
-  font-family: "Rye", cursive;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  box-shadow: 8px 8px 0 #2d1810;
-  text-decoration: none;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.payment-btn:hover {
-  background: linear-gradient(180deg, #ffed4e 0%, #f0c400 100%);
-  transform: translate(-3px, -3px);
-  box-shadow: 11px 11px 0 #2d1810;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-footer {
-  background: linear-gradient(180deg, #5d4e37 0%, #3d2f1f 100%);
-  border-top: 5px solid #2d1810;
-  padding: 3rem 5%;
-  text-align: center;
-}
-
-.footer-content {
-  font-family: "Special Elite", cursive;
-  color: #f4e4c1;
-}
-
-.footer-content h3 {
-  font-family: "Rye", cursive;
-  font-size: 1.2rem;
-  color: #ffd700;
-  margin-bottom: 1rem;
-  text-shadow: 3px 3px 0 #2d1810;
-}
-
-.footer-rope {
-  width: 150px;
-  height: 8px;
-  background: repeating-linear-gradient(
-    90deg,
-    #8b6f47 0px,
-    #8b6f47 8px,
-    #5d4e37 8px,
-    #5d4e37 16px
-  );
-  margin: 1rem auto;
-  border: 2px solid #2d1810;
-}
-
-.footer-stars {
-  font-size: 2rem;
-  color: #ffd700;
-  margin: 1rem 0;
-}
-
-.contact-info {
-  font-size: 1.1rem;
-  margin: 1rem 0;
-}
-
-@media (max-width: 768px) {
-  
-  .western-title {
-    font-size: 2rem ;
-    letter-spacing: 2px ;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  header {
+    padding: 0.5rem 4% !important;
+    min-height: 60px;
+    display: flex !important;
+    justify-content: space-between !important; 
+    align-items: center !important;
   }
 
-  .direction {
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
-    margin-top: 3rem;
+  .logo-image {
+    width: 2.5rem; /
+    height: 2.5rem;
   }
-  
+
+  .logo-text {
+    font-size: 1.2rem !important;
+  }
+
   .back-btn {
-    padding: 0.3rem 0.7rem !important; 
-    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important; 
+    font-size: 0.75rem !important;
     width: auto !important;
     min-width: 0 !important;
     margin: 0 !important; 
     border-width: 2px !important;
     box-shadow: 2px 2px 0 #2d1810 !important;
     line-height: 1.2 !important;
+    letter-spacing: 1px !important;
+  }
+
+  .direction {
+    margin: 0 !important;
+    display: inline-block;
+  }
+
+  .hero {
+    padding: 110px 5% 50px !important; */
+  }
+
+  .western-title {
+    font-size: clamp(2rem, 10vw, 4rem) !important;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .subtitle-banner h2 {
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
-
-  .section-title {
-    font-size: 1.2rem ;
+    font-size: clamp(0.7rem, 3.5vw, 1rem) !important;
+    letter-spacing: 1px;
     white-space: normal;
+    word-break: break-word;
   }
 
-  .payment-btn {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.2rem;
+  .announcement {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .wood-section {
+    padding: 40px 10px !important;
   }
 
   .section-header {
-    width: 100%;
-    text-align: center;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    white-space: normal;
   }
 
   .rope-divider {
-    width: 100px;
-    max-width: 100px;
+    width: 60px;
+    max-width: 60px;
+    height: 6px;
+  }
+
+  .merch-grid {
+    grid-template-columns: 1fr; /* Satu kolom di HP */
+    max-width: 100%;
+    gap: 1.5rem;
+    padding: 5px;
+  }
+
+  .merch-card {
+    max-width: 320px;
   }
 
   .merch-img-wrap {
-    height: 350px;
+    height: 280px;
   }
 
   .merch-name {
@@ -570,55 +470,29 @@ footer {
   }
 
   .merch-price {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .merch-info {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.75rem;
   }
 
   .merch-desc { 
-    display: block; 
-    font-size: 0.95rem;
-    
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .payment-btn {
+    width: 90%;
+    max-width: 300px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
 
   .features-grid {
     grid-template-columns: 1fr; 
     gap: 1.2rem;
-  }
-
-  .feature-card {
-    padding: 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .feature-icon {
-    font-size: 2.5rem; 
-  }
-
-  .feature-card h4 {
-    font-size: 1.1rem;
-  }
-
-  .feature-card p {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-}
-
-@media (max-width: 768px) {
-  .western-title {
-    font-size: clamp(2rem, 10vw, 4rem) !important;
-    letter-spacing: 2px;
-  }
-  
-  .subtitle-banner h2 {
-    font-size: clamp(0.7rem, 3.5vw, 1rem) !important;
-    letter-spacing: 1px;
-    white-space: normal;
-    word-break: break-word;
   }
 
   .footer-content h3 {
@@ -634,18 +508,5 @@ footer {
     align-items: center;
     gap: 0.3rem;
     font-size: 0.8rem;
-  }
-}
-
-  header {
-    padding: 0.5rem 4% !important;
-    min-height: 60px;
-    display: flex !important;
-    justify-content: space-between !important; 
-    align-items: center !important;
-  }
-
-  .logo-text {
-    font-size: 1.2rem;
   }
 }
