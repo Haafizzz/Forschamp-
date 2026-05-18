@@ -30,4 +30,22 @@ document
     observer.observe(el);
   });
 
+// Timeline scroll animation with stagger – new parchment design
+const timelineObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        timelineObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+document.querySelectorAll(".tl-item").forEach((item, i) => {
+  item.style.transitionDelay = `${i * 0.2}s`;
+  timelineObserver.observe(item);
+});
+
 console.log("🏃 FORSCHAMP Fun Run 2026 - Ready to roll! 🤠");

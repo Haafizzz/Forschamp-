@@ -496,3 +496,1020 @@ footer {
     margin-left: 1.5rem;
   }
 }
+
+/* ============================================================
+   TIMELINE – WILD WEST PARCHMENT REDESIGN
+   ============================================================ */
+
+.timeline-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 3% 120px;
+  position: relative;
+}
+
+/* ── WANTED POSTER HEADER ── */
+.tl-wanted-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.tl-wanted-inner {
+  position: relative;
+  padding: 2.5rem 5rem 2.5rem;
+  text-align: center;
+  /* Parchment texture via layered gradients */
+  background:
+    radial-gradient(ellipse at 0% 0%,   rgba(101,67,33,0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%,  rgba(101,67,33,0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(101,67,33,0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%,rgba(101,67,33,0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255,248,220,0.2) 0%, transparent 80%),
+    linear-gradient(160deg, #f5e6c0 0%, #eedcaa 40%, #e3cb90 70%, #d4b878 100%);
+  /* Burn edge simulation */
+  border: none;
+  box-shadow:
+    0 0 0 3px #6b4423,
+    0 0 0 7px #3d2208,
+    0 0 0 10px #6b4423,
+    8px 12px 30px rgba(0,0,0,0.55),
+    inset 0 0 60px rgba(139,90,43,0.15);
+  /* Torn/rough edge using filter */
+  filter: drop-shadow(0 4px 18px rgba(0,0,0,0.5));
+  /* Slight tilt */
+  transform: rotate(-0.5deg);
+}
+
+/* Pseudo torn edge overlay on header */
+.tl-wanted-inner::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: transparent;
+  border: 4px solid rgba(93,46,14,0.6);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Nail pins on header */
+.tl-pin {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #c8c8c8, #5a5a5a 60%, #222);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.7), inset -1px -1px 3px rgba(255,255,255,0.3);
+  z-index: 2;
+}
+.tl-pin-tl { top: -6px; left: 30px; }
+.tl-pin-tr { top: -6px; right: 30px; }
+
+.tl-wanted-eyebrow {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  color: #6b4423;
+  margin-bottom: 0.3rem;
+}
+
+.tl-wanted-label {
+  font-family: 'Rye', cursive;
+  font-size: 3.8rem;
+  color: #3d1f05;
+  text-shadow: 3px 3px 0 rgba(93,46,14,0.3), -1px -1px 0 rgba(93,46,14,0.15);
+  letter-spacing: 10px;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.tl-wanted-title {
+  font-family: 'Special Elite', cursive;
+  font-size: 2rem;
+  color: #2d1007;
+  letter-spacing: 6px;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+}
+
+/* Ornate divider */
+.tl-ornate-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0.5rem auto;
+  width: 80%;
+}
+.tl-div-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6b4423, transparent);
+}
+.tl-div-icon {
+  font-size: 1rem;
+  color: #8b4513;
+}
+
+.tl-wanted-sub {
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: #5d3010;
+  margin-top: 0.6rem;
+}
+
+/* Big wax seal emoji */
+.tl-wanted-seal {
+  font-size: 2.5rem;
+  margin-top: 0.8rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  animation: sealBob 3s ease-in-out infinite;
+}
+@keyframes sealBob {
+  0%,100% { transform: translateY(0) rotate(-3deg); }
+  50%      { transform: translateY(-6px) rotate(3deg); }
+}
+
+/* ── SPINE WRAPPER ── */
+.tl-spine-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* The vertical rope spine */
+.tl-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tl-spine-rope {
+  width: 100%;
+  height: 100%;
+  background:
+    /* Strand highlights */
+    repeating-linear-gradient(
+      -20deg,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    /* Core rope color */
+    linear-gradient(90deg, #3d2510 0%, #6b4118 25%, #8b5a2b 50%, #6b4118 75%, #3d2510 100%);
+  border-radius: 10px;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.5), -1px 0 5px rgba(0,0,0,0.3);
+}
+
+/* ── TIMELINE ITEM ── */
+.tl-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 3.5rem 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(.23,1,.32,1), transform 0.8s cubic-bezier(.23,1,.32,1);
+}
+
+.tl-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left items: card on LEFT side */
+.tl-left {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-right: calc(50% + 50px);
+  padding-left: 0;
+}
+
+/* Right items: card on RIGHT side */
+.tl-right {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  padding-left: calc(50% + 50px);
+  padding-right: 0;
+}
+
+/* ── STAR NODE (Sheriff Badge) ── */
+.tl-star-node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  /* Star shape via clip-path */
+  clip-path: polygon(
+    50% 0%,    61% 35%,   98% 35%,   68% 57%,
+    79% 91%,   50% 70%,   21% 91%,   32% 57%,
+    2%  35%,   39% 35%
+  );
+  background: radial-gradient(circle at 40% 35%, #c9954a, #8b4513 55%, #5d2f0f 85%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  animation: starPulse 4s ease-in-out infinite;
+}
+
+.tl-star-node.tl-star-gold {
+  background: radial-gradient(circle at 40% 35%, #ffe566, #daa520 55%, #8b6500 85%);
+  animation: starGoldGlow 2.5s ease-in-out infinite;
+}
+
+.tl-star {
+  font-size: 1.6rem;
+  color: rgba(255,240,200,0.9);
+  text-shadow: 0 0 8px rgba(255,200,100,0.8);
+  line-height: 1;
+  display: none; /* hidden; shape IS the star */
+}
+
+.tl-star-label {
+  font-family: 'Rye', cursive;
+  font-size: 1.1rem;
+  color: #f4e4c1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+@keyframes starPulse {
+  0%,100% { filter: drop-shadow(0 0 4px rgba(139,69,19,0.4)); }
+  50%      { filter: drop-shadow(0 0 14px rgba(180,100,30,0.7)); }
+}
+@keyframes starGoldGlow {
+  0%,100% { filter: drop-shadow(0 0 6px rgba(218,165,32,0.5)); }
+  50%      { filter: drop-shadow(0 0 20px rgba(255,215,0,0.9)); }
+}
+
+/* ── HORIZONTAL ROPE CONNECTOR ── */
+.tl-rope-h {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 7px;
+  z-index: 5;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #3d2510 0px, #3d2510 4px,
+      #6b4118 4px, #6b4118 8px,
+      #8b5a2b 8px, #8b5a2b 10px,
+      #6b4118 10px, #6b4118 14px
+    );
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+.tl-rope-left {
+  left: calc(50% + 32px);
+  right: 0;
+}
+.tl-rope-right {
+  right: calc(50% + 32px);
+  left: 0;
+}
+
+.tl-rope-gold {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #8b6500 0px, #8b6500 4px,
+      #c9940a 4px, #c9940a 8px,
+      #daa520 8px, #daa520 10px,
+      #c9940a 10px, #c9940a 14px
+    );
+}
+
+/* ── PARCHMENT CARD ── */
+.tl-parchment {
+  position: relative;
+  padding: 2.2rem 2.4rem 2.8rem;
+  text-align: center;
+  overflow: visible;
+  cursor: default;
+  z-index: 6;
+  transition: transform 0.35s cubic-bezier(.23,1,.32,1);
+
+  /* The parchment aged-paper look */
+  background:
+    /* Corner burn vignettes */
+    radial-gradient(ellipse at 0% 0%,   rgba(93,40,10,0.55) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 0%,  rgba(93,40,10,0.55) 0%, transparent 45%),
+    radial-gradient(ellipse at 0% 100%, rgba(93,40,10,0.55) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 100%,rgba(93,40,10,0.55) 0%, transparent 45%),
+    /* Edge darkening */
+    radial-gradient(ellipse at 50% 0%,   rgba(139,80,30,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(139,80,30,0.2) 0%, transparent 60%),
+    /* Center lightening + warm tones */
+    radial-gradient(ellipse at 50% 40%, rgba(255,252,235,0.7) 0%, transparent 65%),
+    /* Subtle stain blotches */
+    radial-gradient(ellipse at 25% 65%, rgba(180,130,60,0.12) 0%, transparent 40%),
+    radial-gradient(ellipse at 75% 30%, rgba(160,110,50,0.10) 0%, transparent 40%),
+    /* Base parchment */
+    linear-gradient(160deg, #f0dca8 0%, #e8cf95 35%, #f2e0b0 60%, #dfc78a 100%);
+
+  /* Shadow that simulates a pinned document on wood */
+  box-shadow:
+    4px 6px 0  rgba(45,18,5,0.6),
+    8px 10px 0 rgba(45,18,5,0.25),
+    0 16px 40px rgba(0,0,0,0.45),
+    inset 0 0 50px rgba(139,90,40,0.08);
+
+  /* Rough torn-paper border using outline trick */
+  outline: 2px solid rgba(93,46,14,0.5);
+  outline-offset: -6px;
+}
+
+/* Rough burnt edge using pseudo-elements */
+.tl-parchment::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid rgba(80,35,10,0.4);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 7;
+  /* Simulate rough edge by creating an irregular box-shadow inset */
+  box-shadow:
+    inset 3px  3px  8px rgba(93,40,10,0.35),
+    inset -3px 3px  8px rgba(93,40,10,0.30),
+    inset 3px -3px  8px rgba(93,40,10,0.30),
+    inset -3px -3px 8px rgba(93,40,10,0.35),
+    inset 0 0 30px rgba(139,80,30,0.12);
+}
+
+/* Worn paper fiber texture overlay */
+.tl-parchment::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    88deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(139,100,50,0.03) 3px,
+    rgba(139,100,50,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 7;
+}
+
+.tl-parchment:hover {
+  transform: translateY(-8px) rotate(1.5deg);
+  box-shadow:
+    6px 10px 0  rgba(45,18,5,0.6),
+    12px 16px 0 rgba(45,18,5,0.2),
+    0 24px 50px rgba(0,0,0,0.5),
+    inset 0 0 50px rgba(139,90,40,0.08);
+}
+
+/* Gold parchment variant */
+.tl-parchment-gold {
+  background:
+    radial-gradient(ellipse at 0% 0%,   rgba(120,80,0,0.5) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 0%,  rgba(120,80,0,0.5) 0%, transparent 45%),
+    radial-gradient(ellipse at 0% 100%, rgba(120,80,0,0.5) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 100%,rgba(120,80,0,0.5) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 40%, rgba(255,255,220,0.6) 0%, transparent 65%),
+    radial-gradient(ellipse at 30% 70%, rgba(200,160,50,0.12) 0%, transparent 40%),
+    linear-gradient(150deg, #fffbe0 0%, #f5e580 30%, #ffe090 60%, #e8c840 100%);
+  box-shadow:
+    4px 6px 0  rgba(100,70,0,0.6),
+    8px 10px 0 rgba(100,70,0,0.2),
+    0 16px 50px rgba(180,130,0,0.3),
+    0 0 60px rgba(255,210,0,0.15),
+    inset 0 0 50px rgba(200,160,30,0.1);
+  outline-color: rgba(150,100,0,0.5);
+}
+
+/* ── PINS on card ── */
+.tl-p-pin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 33% 30%, #d4d4d4, #606060 55%, #1a1a1a);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.7), inset -1px -1px 2px rgba(255,255,255,0.2);
+  z-index: 10;
+}
+.tl-p-pin-tl { top: -6px;  left: 20px; }
+.tl-p-pin-tr { top: -6px;  right: 20px; }
+
+/* ── CARD CONTENT ── */
+.tl-p-eyebrow {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+  color: #6b3a0f;
+  margin-bottom: 0.5rem;
+}
+
+.tl-eyebrow-gold { color: #8b6500; }
+
+.tl-p-icon {
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
+  filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.3));
+  line-height: 1;
+}
+
+.tl-p-title {
+  font-family: 'Rye', cursive;
+  font-size: 1.8rem;
+  color: #2d1007;
+  text-shadow: 2px 2px 0 rgba(93,46,14,0.3);
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.tl-title-gold {
+  color: #3d2000;
+  text-shadow: 2px 2px 0 rgba(180,130,0,0.4), 0 0 20px rgba(255,200,0,0.2);
+}
+
+/* Ornate rule divider */
+.tl-p-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.6rem auto;
+  width: 90%;
+}
+.tl-p-divider span:first-child,
+.tl-p-divider span:last-child {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #7a4515, transparent);
+  display: block;
+}
+.tl-p-divider span:nth-child(2) {
+  font-size: 0.9rem;
+  color: #7a4515;
+  flex-shrink: 0;
+}
+.tl-divider-gold span:first-child,
+.tl-divider-gold span:last-child {
+  background: linear-gradient(90deg, transparent, #9a7000, transparent);
+}
+.tl-divider-gold span:nth-child(2) { color: #9a7000; }
+
+/* Date range row */
+.tl-p-dates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0.3rem 0;
+  padding: 0.8rem 0.6rem;
+  background: rgba(45,18,5,0.07);
+  border-top: 1px solid rgba(93,46,14,0.2);
+  border-bottom: 1px solid rgba(93,46,14,0.2);
+  flex-wrap: wrap;
+}
+
+.tl-p-date-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+
+.tl-p-date-lbl {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  color: #7a4515;
+  text-transform: uppercase;
+}
+
+.tl-p-date-val {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.95rem;
+  color: #2d1007;
+  font-weight: bold;
+}
+
+.tl-p-arrow {
+  font-size: 1.6rem;
+  color: #7a4515;
+  flex-shrink: 0;
+}
+
+/* Single centered date (Race Day) */
+.tl-p-date-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 1rem 0.6rem;
+  background: rgba(180,130,0,0.12);
+  border-top: 1px solid rgba(150,100,0,0.25);
+  border-bottom: 1px solid rgba(150,100,0,0.25);
+  margin: 0.3rem 0;
+}
+
+.tl-p-date-big {
+  font-family: 'Rye', cursive;
+  font-size: 1.5rem;
+  color: #2d1007;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Description text */
+.tl-p-desc {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.92rem;
+  color: #4a2a10;
+  line-height: 1.8;
+  margin-top: 0.3rem;
+}
+
+/* Stamp / seal */
+.tl-p-stamp {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  font-family: 'Rye', cursive;
+  font-size: 0.95rem;
+  color: rgba(120,30,20,0.55);
+  border: 3px solid rgba(120,30,20,0.45);
+  padding: 0.2rem 0.65rem;
+  border-radius: 3px;
+  transform: rotate(-14deg);
+  letter-spacing: 3px;
+  pointer-events: none;
+  z-index: 10;
+  /* Worn stamp blur */
+  text-shadow: 1px 0 0 rgba(120,30,20,0.2), -1px 0 0 rgba(120,30,20,0.2);
+}
+
+.tl-stamp-gold {
+  color: rgba(160,110,0,0.6);
+  border-color: rgba(160,110,0,0.5);
+  transform: rotate(-10deg);
+  font-size: 1.05rem;
+}
+
+/* ──────────────────────────────────────────
+   RESPONSIVE
+   ────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .tl-spine { left: 36px; }
+
+  .tl-item,
+  .tl-left,
+  .tl-right {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 2.5rem 0 2.5rem 90px;
+  }
+
+  .tl-rope-h {
+    left: 66px !important;
+    right: auto !important;
+    width: 30px !important;
+  }
+
+  .tl-star-node { left: 36px; }
+
+  .tl-parchment { width: 100%; }
+
+  .tl-wanted-inner {
+    padding: 2rem 2rem;
+  }
+  .tl-wanted-label { font-size: 2.5rem; letter-spacing: 6px; }
+  .tl-wanted-title { font-size: 1.4rem; }
+
+  .tl-p-title { font-size: 1.4rem; }
+  .tl-p-dates { flex-direction: column; gap: 0.4rem; }
+  .tl-p-arrow { transform: rotate(90deg); font-size: 1.2rem; }
+}
+
+.timeline-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 5% 100px;
+  position: relative;
+}
+
+/* --- WANTED POSTER HEADER --- */
+.timeline-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.wanted-poster-title {
+  background: linear-gradient(160deg, #f4e4c1 0%, #e8d0a0 60%, #d4b87a 100%);
+  border: 6px double #2d1810;
+  outline: 3px solid #8b6f47;
+  outline-offset: 6px;
+  padding: 2rem 4rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 8px 8px 0 rgba(45,24,16,0.4), inset 0 0 40px rgba(139,111,71,0.2);
+}
+
+.wanted-poster-title::before,
+.wanted-poster-title::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle, #5d4e37 30%, #2d1810 100%);
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.wanted-poster-title::before { top: 10px; left: 10px; }
+.wanted-poster-title::after  { top: 10px; right: 10px; }
+
+.wanted-top {
+  font-family: 'Rye', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 6px;
+  color: #8b4513;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-main-title {
+  margin-bottom: 0.3rem;
+  font-size: 3.5rem;
+  text-shadow: 4px 4px 0 rgba(45,24,16,0.2);
+}
+
+.wanted-bottom {
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: #5d4e37;
+}
+
+/* --- TIMELINE WRAPPER --- */
+.timeline-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* vertical spine */
+.timeline-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    180deg,
+    #5d4e37 0px,
+    #5d4e37 12px,
+    #8b6f47 12px,
+    #8b6f47 20px
+  );
+  border-radius: 3px;
+  box-shadow: 2px 0 8px rgba(45,24,16,0.4);
+}
+
+/* --- TIMELINE ITEM --- */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* card on the left, connector on right */
+.timeline-item:not(.reverse) .timeline-card      { order: 1; }
+.timeline-item:not(.reverse) .timeline-connector { order: 2; }
+
+/* card on the right, connector on left */
+.timeline-item.reverse .timeline-connector { order: 1; }
+.timeline-item.reverse .timeline-card      { order: 2; }
+
+/* --- CONNECTOR (NODE + ROPE) --- */
+.timeline-connector {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.timeline-connector.left {
+  justify-content: flex-start;
+}
+.timeline-connector.right {
+  justify-content: flex-end;
+}
+
+/* horizontal rope reaching spine */
+.rope-line {
+  flex: 1;
+  height: 5px;
+  background: repeating-linear-gradient(
+    90deg,
+    #5d4e37 0px,
+    #5d4e37 8px,
+    #8b6f47 8px,
+    #8b6f47 14px
+  );
+}
+
+/* horseshoe node */
+.horseshoe-node {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #c9954a, #8b4513 60%, #5d2f0f);
+  border: 4px solid #2d1810;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5), inset 0 -3px 6px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+.horseshoe-node.gold {
+  background: radial-gradient(circle at 35% 35%, #ffe066, #daa520 60%, #8b6500);
+  border-color: #5d4200;
+  animation: goldGlow 2s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+  0%, 100% { box-shadow: 4px 4px 10px rgba(0,0,0,0.5), 0 0 0 0 rgba(139,69,19,0.4); }
+  50%       { box-shadow: 4px 4px 10px rgba(0,0,0,0.5), 0 0 0 10px rgba(139,69,19,0); }
+}
+
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 4px 4px 10px rgba(0,0,0,0.5), 0 0 0 0 rgba(218,165,32,0.6); }
+  50%       { box-shadow: 4px 4px 16px rgba(0,0,0,0.5), 0 0 20px 5px rgba(218,165,32,0.3); }
+}
+
+.node-number {
+  font-family: 'Rye', cursive;
+  font-size: 1.5rem;
+  color: #f4e4c1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  line-height: 1;
+}
+
+/* --- TIMELINE CARD --- */
+.timeline-card {
+  background: linear-gradient(160deg, #f4e4c1 0%, #e8d0a0 100%);
+  border: 5px solid #2d1810;
+  padding: 2.2rem 2.5rem;
+  position: relative;
+  box-shadow: 8px 8px 0 rgba(45,24,16,0.35),
+              inset 0 0 30px rgba(139,111,71,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.timeline-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 12px 12px 0 rgba(45,24,16,0.4);
+}
+
+.timeline-item.reverse .timeline-card:hover {
+  transform: translateY(-6px) rotate(1deg);
+}
+
+/* Gold card for race day */
+.gold-card {
+  background: linear-gradient(160deg, #fff8e0 0%, #ffe8a0 100%);
+  border-color: #8b6500;
+  box-shadow: 8px 8px 0 rgba(139,101,0,0.4), 0 0 30px rgba(255,215,0,0.15);
+}
+
+/* Nail decorations */
+.card-nail {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #a0a0a0, #4a4a4a);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+.card-nail.top-left     { top: 10px;    left: 10px;    }
+.card-nail.top-right    { top: 10px;    right: 10px;   }
+.card-nail.bottom-left  { bottom: 10px; left: 10px;    }
+.card-nail.bottom-right { bottom: 10px; right: 10px;   }
+
+/* Badge */
+.card-badge {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+}
+
+/* Phase label */
+.card-phase {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  color: #8b4513;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+/* Card title */
+.card-title {
+  font-family: 'Rye', cursive;
+  font-size: 1.6rem;
+  color: #2d1810;
+  text-align: center;
+  text-shadow: 2px 2px 0 rgba(139,111,71,0.4);
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+/* Date range */
+.card-date-range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(45,24,16,0.08);
+  border: 2px solid rgba(45,24,16,0.2);
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.date-from, .date-to {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.date-label {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.date-value {
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  color: #2d1810;
+  font-weight: bold;
+}
+
+.date-arrow {
+  font-size: 1.8rem;
+  color: #8b4513;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Single date (race day) */
+.card-date-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(218,165,32,0.2);
+  border: 2px solid rgba(139,101,0,0.3);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.date-value-big {
+  font-family: 'Rye', cursive;
+  font-size: 1.4rem;
+  color: #2d1810;
+  text-align: center;
+}
+
+/* Description */
+.card-desc {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.95rem;
+  color: #4a3020;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Stamp */
+.card-stamp {
+  position: absolute;
+  bottom: 18px;
+  right: 22px;
+  font-family: 'Rye', cursive;
+  font-size: 1rem;
+  color: rgba(139,69,19,0.55);
+  border: 3px solid rgba(139,69,19,0.45);
+  padding: 0.25rem 0.7rem;
+  border-radius: 4px;
+  transform: rotate(-12deg);
+  letter-spacing: 2px;
+  pointer-events: none;
+}
+
+.card-stamp.gold-stamp {
+  color: rgba(184,134,11,0.6);
+  border-color: rgba(184,134,11,0.5);
+  transform: rotate(-10deg);
+  font-size: 1.1rem;
+}
+
+/* ==============================
+   TIMELINE RESPONSIVE
+   ============================== */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    gap: 3rem;
+  }
+
+  .timeline-wrapper::before {
+    left: 28px;
+  }
+
+  .timeline-item,
+  .timeline-item.reverse {
+    grid-template-columns: 56px 1fr;
+    align-items: flex-start;
+  }
+
+  .timeline-item .timeline-card,
+  .timeline-item.reverse .timeline-card {
+    order: 2;
+  }
+  .timeline-item .timeline-connector,
+  .timeline-item.reverse .timeline-connector {
+    order: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  .rope-line {
+    width: 5px;
+    height: 30px;
+    flex: none;
+    background: repeating-linear-gradient(
+      180deg,
+      #5d4e37 0px,
+      #5d4e37 8px,
+      #8b6f47 8px,
+      #8b6f47 14px
+    );
+  }
+
+  .horseshoe-node {
+    width: 46px;
+    height: 46px;
+  }
+
+  .node-number { font-size: 1.2rem; }
+  .card-title  { font-size: 1.2rem; }
+
+  .card-date-range {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .date-arrow { transform: rotate(90deg); }
+
+  .timeline-main-title {
+    font-size: 2.2rem;
+  }
+
+  .wanted-poster-title {
+    padding: 1.5rem 2rem;
+  }
+}
