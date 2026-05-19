@@ -113,6 +113,22 @@ body {
 .finish { animation: none; display: flex; align-items: center; justify-content: center; background: none; }
 .finish::after { content: "🏁"; font-size: 3.5rem; }
 
+@media (max-width: 600px) {
+  .tumbleweed {
+    width: 55px;
+    height: 55px;
+  }
+
+  .runner, .sepatu, .finish {
+    width: 55px;
+    height: 55px;
+  }
+
+  .runner::after, .sepatu::after, .finish::after {
+    font-size: 2rem; 
+  }  
+}
+
 @keyframes floatAcross {
   0% {
     left: -100px;
