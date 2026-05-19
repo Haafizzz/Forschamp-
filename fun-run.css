@@ -59,7 +59,7 @@ body {
   background-position: center;
   opacity: 0.8;
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.2));
-  animation: slowRotate 10s linear infinite;
+  animation: slowRotate 12s linear infinite;
 }
 
 @keyframes floatAcross {
@@ -78,39 +78,40 @@ body {
 .magnet { background-image: url('images/MAGNET.png'); width: 100px; height: 100px; }
 
 .v-kaktus { 
-  top: 18%; 
-  animation-duration: 30s; 
+  top: 8%; 
+  animation-duration: 40s; 
+  animation-delay: -2s;
 }
 
 .v-magnet { 
-  top: 25%; 
-  animation-duration: 28s; 
-  animation-delay: -5s;
+  top: 22%; 
+  animation-duration: 32s; 
+  animation-delay: -12s;
 }
 
 .v-topi { 
-  top: 45%; 
-  animation-duration: 26s; 
-  animation-delay: -15s;
+  top: 48%; 
+  animation-duration: 36s; 
+  animation-delay: -7s;
 }
 
 .v-boots { 
   top: 88%; 
-  animation-duration: 24s; 
-  animation-delay: -10s;
+  animation-duration: 30s; 
+  animation-delay: -5s;
 }
 
-.runner-wrap { top: 60%; animation-duration: 15s; }
+.runner-wrap { top: 62%; animation-duration: 20s; animation-delay: -15s; }
 .runner { animation: none; display: flex; align-items: center; justify-content: center; background: none; }
-.runner::after { content: "🏃"; font-size: 3.5rem; }
+.runner::after { content: "🏃"; font-size: 3.2rem; }
 
-.sepatu-wrap { top: 35%; animation-duration: 20s; }
+.sepatu-wrap { top: 35%; animation-duration: 28s; animation-delay: -22s; }
 .sepatu { animation: none; display: flex; align-items: center; justify-content: center; background: none; }
-.sepatu::after { content: "👟"; font-size: 3.5rem; }
+.sepatu::after { content: "👟"; font-size: 3.2rem; }
 
-.finish-wrap { top: 72%; animation-duration: 35s; }
+.finish-wrap { top: 75%; animation-duration: 42s; animation-delay: -27s; }
 .finish { animation: none; display: flex; align-items: center; justify-content: center; background: none; }
-.finish::after { content: "🏁"; font-size: 3.5rem; }
+.finish::after { content: "🏁"; font-size: 3.2rem; }
 
 @keyframes floatAcross {
   0% {
